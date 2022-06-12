@@ -1,6 +1,6 @@
 @if (session('toasts', collect())->count())
     <div class="toast-container position-static">
-        <div class="p-3 {{ $x_position }}-0 {{ $y_position }}-0">
+        <div class="p-3 {{ $xPosition }}-0 {{ $yPosition }}-0">
             @foreach (session('toasts', collect())->toArray() as $toast)
                 <div class="toast text-bg-{{ $toast['level'] ?? 'primary' }}" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000"
                      @if (!$autoHide) data-autohide="false" @endif>

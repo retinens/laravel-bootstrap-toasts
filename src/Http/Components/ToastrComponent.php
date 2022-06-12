@@ -6,13 +6,14 @@ use Illuminate\View\Component;
 
 class ToastrComponent extends Component
 {
-    public function __construct(
-        public string $x_position = '',
-        public string $y_position = '',
-        public bool $autoHide = true,
-    ) {
-        $this->x_position = config('bootstrap-toasts.position_x', 'end');
-        $this->y_position = config('bootstrap-toasts.position_y', 'bottom');
+    public string $xPosition = '';
+    public string $yPosition = '';
+    public bool $autoHide = true;
+
+    public function __construct()
+    {
+        $this->xPosition = config('bootstrap-toasts.position_x', 'end');
+        $this->yPosition = config('bootstrap-toasts.position_y', 'bottom');
         $this->autoHide = config('bootstrap-toasts.auto_hide', true);
     }
 
