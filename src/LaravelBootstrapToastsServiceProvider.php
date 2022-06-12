@@ -22,6 +22,5 @@ class LaravelBootstrapToastsServiceProvider extends PackageServiceProvider
             ->hasViews();
 
         Blade::component(ToastrComponent::class, 'boostrap-toastr');
-
     }
 }

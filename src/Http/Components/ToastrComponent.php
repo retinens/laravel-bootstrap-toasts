@@ -6,13 +6,11 @@ use Illuminate\View\Component;
 
 class ToastrComponent extends Component
 {
-
     public function __construct(
         public string $xPosition = '',
         public string $yPosition = '',
         public bool $autoHide = true,
-    )
-    {
+    ) {
         $this->xPosition ?: config('laravel-bootstrap-toasts.position_x');
         $this->yPosition ?: config('laravel-bootstrap-toasts.position_y');
         $this->autoHide = config('laravel-bootstrap-toasts.auto_hide');
