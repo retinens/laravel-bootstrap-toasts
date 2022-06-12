@@ -6,10 +6,9 @@ use Illuminate\Support\Collection;
 
 class Toaster
 {
-
     public Collection $toasts;
 
-    function __construct()
+    public function __construct()
     {
         $this->toasts = collect();
     }
@@ -44,10 +43,10 @@ class Toaster
     public function toast($message = null, $level = null, $title = null): static
     {
         // If the message is null, we update the level on the last one
-        if (!$message) {
+        if (! $message) {
             return $this->updateLastToast(compact('level'));
         }
-        if (!$message instanceof Toast) {
+        if (! $message instanceof Toast) {
             $toast = new Toast(compact('message', 'level', 'title'));
         }
 
@@ -63,10 +62,10 @@ class Toaster
         return $this;
     }
 
-
     public function important(): static
     {
         $this->toasts->last()->autohide = false;
+
         return $this;
     }
 
@@ -80,7 +79,7 @@ class Toaster
     protected function flash(): static
     {
         app()->session->flash('toasts', $this->toasts);
+
         return $this;
     }
 }
-

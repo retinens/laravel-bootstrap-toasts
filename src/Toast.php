@@ -6,7 +6,6 @@ use ArrayAccess;
 
 class Toast implements ArrayAccess
 {
-
     public string $title;
 
     public string $message;
@@ -20,7 +19,6 @@ class Toast implements ArrayAccess
         $this->autoHide = config('laravel-bootstrap-toasts.auto_hide', true);
         $this->update($attributes);
     }
-
 
     public function update($attributes = []): static
     {
