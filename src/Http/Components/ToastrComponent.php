@@ -18,6 +18,6 @@ class ToastrComponent extends Component
 
     public function render()
     {
-        return view('boostrap-toasts::message');
+        return view('bootstrap-toasts::message');
     }
 }
