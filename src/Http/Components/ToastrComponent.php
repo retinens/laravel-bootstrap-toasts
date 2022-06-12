@@ -11,9 +11,9 @@ class ToastrComponent extends Component
         public string $yPosition = '',
         public bool $autoHide = true,
     ) {
-        $this->xPosition ?: config('laravel-bootstrap-toasts.position_x','top');
-        $this->yPosition ?: config('laravel-bootstrap-toasts.position_y','end');
-        $this->autoHide = config('laravel-bootstrap-toasts.auto_hide',true);
+        $this->xPosition ?: config('laravel-bootstrap-toasts.position_x', 'top');
+        $this->yPosition ?: config('laravel-bootstrap-toasts.position_y', 'end');
+        $this->autoHide = config('laravel-bootstrap-toasts.auto_hide', true);
     }
 
     public function render()
