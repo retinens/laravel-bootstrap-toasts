@@ -5,7 +5,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/retinens/laravel-bootstrap-toasts/Check%20&%20fix%20styling?label=code%20style)](https://github.com/retinens/laravel-bootstrap-toasts/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/retinens/laravel-bootstrap-toasts.svg?style=flat-square)](https://packagist.org/packages/retinens/laravel-bootstrap-toasts)
 
-This package provides an easy interface for using Bootstrap 5+ toast messages in a Laravel app.
+This package provides an easy interface for using Bootstrap 5.2+ toast messages in a Laravel app.
 
 ## Installation
 
