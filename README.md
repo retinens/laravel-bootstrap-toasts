@@ -35,9 +35,9 @@ return [
      */
 
     // "top" or "bottom"
-    "position_x" => 'top',
+    "position_y" => 'bottom',
     // "start" or "end"
-    "position_y" => 'end',
+    "position_x" => 'end',
 ];
 ```
 
