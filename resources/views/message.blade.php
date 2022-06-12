@@ -20,7 +20,7 @@
 
     <script>
         const toastElList = document.querySelectorAll('.toast')
-        const toastList = [...toastElList].map(toastEl => new bootstrap.Toast(toastEl, option))
+        const toastList = [...toastElList].map(toastEl => new bootstrap.Toast(toastEl))
     </script>
     @php
         session()->forget('toasts')
