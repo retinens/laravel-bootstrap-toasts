@@ -11,8 +11,8 @@ return [
      */
 
     // "top" or "bottom"
-    "position_x" => 'top',
+    "position_y" => 'top',
     // "start" or "end"
-    "position_y" => 'end',
+    "position_x" => 'end',
 
 ];

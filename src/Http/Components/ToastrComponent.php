@@ -11,8 +11,8 @@ class ToastrComponent extends Component
         public string $yPosition = '',
         public bool $autoHide = true,
     ) {
-        $this->xPosition ?: config('bootstrap-toasts.position_x', 'top');
-        $this->yPosition ?: config('bootstrap-toasts.position_y', 'end');
+        $this->xPosition ?: config('bootstrap-toasts.position_x', 'end');
+        $this->yPosition ?: config('bootstrap-toasts.position_y', 'bottom');
         $this->autoHide = config('bootstrap-toasts.auto_hide', true);
     }
 
