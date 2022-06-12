@@ -1,86 +1,91 @@
+# Bootstrap 5 flash messages for your Laravel app
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/retinens/laravel-bootstrap-toasts.svg?style=flat-square)](https://packagist.org/packages/retinens/laravel-bootstrap-toasts)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/retinens/laravel-bootstrap-toasts/run-tests?label=tests)](https://github.com/retinens/laravel-bootstrap-toasts/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/retinens/laravel-bootstrap-toasts/Check%20&%20fix%20styling?label=code%20style)](https://github.com/retinens/laravel-bootstrap-toasts/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/retinens/laravel-bootstrap-toasts.svg?style=flat-square)](https://packagist.org/packages/retinens/laravel-bootstrap-toasts)
 
-# :package_description
-
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/:vendor_slug/:package_slug/run-tests?label=tests)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/:vendor_slug/:package_slug/Check%20&%20fix%20styling?label=code%20style)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-<!--delete-->
----
-This repo can be used to scaffold a Laravel package. Follow these steps to get started:
-
-1. Press the "Use this template" button at the top of this repo to create a new repo with the contents of this skeleton.
-2. Run "php ./configure.php" to run a script that will replace all placeholders throughout all the files.
-3. Have fun creating your package.
-4. If you need help creating a package, consider picking up our <a href="https://laravelpackage.training">Laravel Package Training</a> video course.
----
-<!--/delete-->
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/:package_name.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/:package_name)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+This package provides an easy interface for using Bootstrap 5+ toast messages in a Laravel app.
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require :vendor_slug/:package_slug
-```
-
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag=":package_slug-migrations"
-php artisan migrate
+composer require retinens/laravel-bootstrap-toasts
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-config"
+php artisan vendor:publish --tag="laravel-bootstrap-toasts-config"
 ```
 
 This is the contents of the published config file:
 
 ```php
 return [
+    /*
+     * Defines the default auto_hide parameter
+     */
+    'auto_hide' => false,
+
+    /*
+     * Defines the position of the toast on the window
+     */
+
+    // "top" or "bottom"
+    "position_x" => 'top',
+    // "start" or "end"
+    "position_y" => 'end',
 ];
 ```
 
 Optionally, you can publish the views using
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-views"
+php artisan vendor:publish --tag="laravel-bootstrap-toasts-views"
 ```
+
 
 ## Usage
 
+First, include this snippet in your Blade template
+
+```html
+<x-boostrap-toastr/>
+```
+
+Then, in your controller, call the `toast()` method to create a toast message.
+
 ```php
-$variable = new VendorName\Skeleton();
-echo $variable->echoPhrase('Hello, VendorName!');
+public function edit()
+{
+    toast('Post edited!');
+    return redirect(route('posts.list'));
+}
 ```
 
-## Testing
+The toast method accepts the title and level as optional arguments :
 
-```bash
-composer test
+```php
+toast('message','level','title')
 ```
+
+There are a few quick methods to modify the toast:
+
+- `toast('Message')->success()`: Set the toast level as "success".
+- `toast('Message')->info()`: Set the toast level as "info".
+- `toast('Message')->error()`: Set the toast level as "danger".
+- `toast('Message')->warning()`: Set the toast level as "warning".
+
+
+- `toast('Message')->title("Toast title")`: Set the toast title.
+- `toast('Message')->important()`: Add a close button to the toast.
 
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](https://github.com/spatie/.github/blob/main/CONTRIBUTING.md) for details.
 
 ## Security Vulnerabilities
 
@@ -88,7 +93,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
+- [Lucas Houssa](https://github.com/WhereIsLucas)
 - [All Contributors](../../contributors)
 
 ## License
