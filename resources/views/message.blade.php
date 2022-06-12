@@ -21,6 +21,7 @@
     <script>
         const toastElList = document.querySelectorAll('.toast')
         const toastList = [...toastElList].map(toastEl => new bootstrap.Toast(toastEl))
+        toastList.forEach(function(item){item.show()})
     </script>
     @php
         session()->forget('toasts')

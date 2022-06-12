@@ -50,6 +50,12 @@ php artisan vendor:publish --tag="laravel-bootstrap-toasts-views"
 
 ## Usage
 
+Bootstrap should be imported in your assets and available in the window variable.
+
+```js
+window.bootstrap = require("bootstrap");
+```
+
 First, include this snippet in your Blade template
 
 ```html
