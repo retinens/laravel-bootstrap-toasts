@@ -7,7 +7,7 @@
                         @if (config('laravel-bootstrap-toasts.icon',null))
                             <img src="{{ config('laravel-bootstrap-toasts.icon',null) }}" class="rounded me-2" alt="...">
                         @endif
-                        <strong class="me-auto">{{ $toast['title'] }}</strong>
+                        <strong class="me-auto">{{ $toast['title'] ?? '' }}</strong>
                         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                     </div>
                     <div class="toast-body">

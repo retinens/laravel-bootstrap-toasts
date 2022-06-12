@@ -6,9 +6,9 @@ use ArrayAccess;
 
 class Toast implements ArrayAccess
 {
-    public string $title;
+    public string $title = '';
 
-    public string $message;
+    public string $message = '';
 
     public string $level = 'info';
 
