@@ -1,6 +1,6 @@
 <?php
 
-namespace Retinens\LaravelBootstrapToasts\Http\Components;
+namespace Retinens\LaravelToastr\Http\Components;
 
 use Illuminate\View\Component;
 

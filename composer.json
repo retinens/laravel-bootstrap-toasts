@@ -1,12 +1,12 @@
 {
-    "name": "retinens/laravel-bootstrap-toasts",
+    "name": "retinens/laravel-toastr",
     "description": "This package provides an easy interface for using Bootstrap 5+ toast messages in a Laravel app.",
     "keywords": [
         "retinens",
         "laravel",
-        "laravel-bootstrap-toasts"
+        "laravel-toastr"
     ],
-    "homepage": "https://github.com/retinens/laravel-bootstrap-toasts",
+    "homepage": "https://github.com/retinens/laravel-toastr",
     "license": "MIT",
     "authors": [
         {
@@ -35,7 +35,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Retinens\\LaravelBootstrapToasts\\": "src"
+            "Retinens\\LaravelToastr\\": "src"
         },
         "files": [
             "src/functions.php"
@@ -43,7 +43,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Retinens\\LaravelBootstrapToasts\\Tests\\": "tests"
+            "Retinens\\LaravelToastr\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -62,10 +62,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Retinens\\LaravelBootstrapToasts\\LaravelBootstrapToastsServiceProvider"
+                "Retinens\\LaravelToastr\\LaravelToastrServiceProvider"
             ],
             "aliases": {
-                "LaravelBootstrapToasts": "Retinens\\LaravelBootstrapToasts\\Facades\\LaravelBootstrapToasts"
+                "LaravelToastr": "Retinens\\LaravelToastr\\Facades\\LaravelToastr"
             }
         }
     },

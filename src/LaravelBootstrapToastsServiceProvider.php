@@ -1,13 +1,13 @@
 <?php
 
-namespace Retinens\LaravelBootstrapToasts;
+namespace Retinens\LaravelToastr;
 
 use Illuminate\Support\Facades\Blade;
-use Retinens\LaravelBootstrapToasts\Http\Components\ToastrComponent;
+use Retinens\LaravelToastr\Http\Components\ToastrComponent;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class LaravelBootstrapToastsServiceProvider extends PackageServiceProvider
+class LaravelToastrServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -17,14 +17,14 @@ class LaravelBootstrapToastsServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('laravel-bootstrap-toasts')
+            ->name('laravel-toastr')
             ->hasConfigFile()
             ->hasViews();
 
         Blade::component(ToastrComponent::class, 'boostrap-toastr');
 
         $this->app->singleton('bootstrap-toaster', function () {
-            return $this->app->make(LaravelBootstrapToasts::class);
+            return $this->app->make(LaravelToastr::class);
         });
     }
 }

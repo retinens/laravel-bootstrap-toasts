@@ -1,10 +1,10 @@
 <?php
 
-namespace Retinens\LaravelBootstrapToasts\Tests;
+namespace Retinens\LaravelToastr\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Retinens\LaravelBootstrapToasts\LaravelBootstrapToastsServiceProvider;
+use Retinens\LaravelToastr\LaravelToastrServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,14 +13,14 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Retinens\\LaravelBootstrapToasts\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Retinens\\LaravelToastr\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            LaravelBootstrapToastsServiceProvider::class,
+            LaravelToastrServiceProvider::class,
         ];
     }
 

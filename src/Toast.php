@@ -1,6 +1,6 @@
 <?php
 
-namespace Retinens\LaravelBootstrapToasts;
+namespace Retinens\LaravelToastr;
 
 use ArrayAccess;
 

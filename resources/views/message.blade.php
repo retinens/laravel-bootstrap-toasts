@@ -7,8 +7,8 @@
                      @if (!$autoHide) data-autohide="false" @endif>
                     @if ($toast['title'])
                         <div class="toast-header">
-                            @if (config('laravel-bootstrap-toasts.icon',null))
-                                <img src="{{ config('laravel-bootstrap-toasts.icon',null) }}" class="rounded me-2"
+                            @if (config('laravel-toastr.icon',null))
+                                <img src="{{ config('laravel-toastr.icon',null) }}" class="rounded me-2"
                                      alt="...">
                             @endif
                             <strong class="me-auto">{{ $toast['title'] ?? '' }}</strong>

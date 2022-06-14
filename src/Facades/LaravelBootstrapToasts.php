@@ -1,16 +1,16 @@
 <?php
 
-namespace Retinens\LaravelBootstrapToasts\Facades;
+namespace Retinens\LaravelToastr\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Retinens\LaravelBootstrapToasts\LaravelBootstrapToasts
+ * @see \Retinens\LaravelToastr\LaravelToastr
  */
-class LaravelBootstrapToasts extends Facade
+class LaravelToastr extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'laravel-bootstrap-toasts';
+        return 'laravel-toastr';
     }
 }

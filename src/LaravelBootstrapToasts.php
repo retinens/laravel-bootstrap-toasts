@@ -1,10 +1,10 @@
 <?php
 
-namespace Retinens\LaravelBootstrapToasts;
+namespace Retinens\LaravelToastr;
 
 use Illuminate\Support\Collection;
 
-class LaravelBootstrapToasts
+class LaravelToastr
 {
     public Collection $toasts;
 

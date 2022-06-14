@@ -1,5 +1,5 @@
 <?php
-// config for Retinens/LaravelBootstrapToasts
+// config for Retinens/LaravelToastr
 return [
     /*
      * Defines the default auto_hide parameter

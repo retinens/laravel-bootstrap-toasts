@@ -1,9 +1,9 @@
 # Bootstrap 5 flash messages for your Laravel app
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/retinens/laravel-bootstrap-toasts.svg?style=flat-square)](https://packagist.org/packages/retinens/laravel-bootstrap-toasts)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/retinens/laravel-bootstrap-toasts/run-tests?label=tests)](https://github.com/retinens/laravel-bootstrap-toasts/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/retinens/laravel-bootstrap-toasts/Check%20&%20fix%20styling?label=code%20style)](https://github.com/retinens/laravel-bootstrap-toasts/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/retinens/laravel-bootstrap-toasts.svg?style=flat-square)](https://packagist.org/packages/retinens/laravel-bootstrap-toasts)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/retinens/laravel-toastr.svg?style=flat-square)](https://packagist.org/packages/retinens/laravel-toastr)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/retinens/laravel-toastr/run-tests?label=tests)](https://github.com/retinens/laravel-toastr/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/retinens/laravel-toastr/Check%20&%20fix%20styling?label=code%20style)](https://github.com/retinens/laravel-toastr/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/retinens/laravel-toastr.svg?style=flat-square)](https://packagist.org/packages/retinens/laravel-toastr)
 
 This package provides an easy interface for using Bootstrap 5.2+ toast messages in a Laravel app.
 
@@ -12,13 +12,13 @@ This package provides an easy interface for using Bootstrap 5.2+ toast messages 
 You can install the package via composer:
 
 ```bash
-composer require retinens/laravel-bootstrap-toasts
+composer require retinens/laravel-toastr
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-bootstrap-toasts-config"
+php artisan vendor:publish --tag="laravel-toastr-config"
 ```
 
 This is the contents of the published config file:
@@ -44,7 +44,7 @@ return [
 Optionally, you can publish the views using
 
 ```bash
-php artisan vendor:publish --tag="laravel-bootstrap-toasts-views"
+php artisan vendor:publish --tag="laravel-toastr-views"
 ```
 
 
